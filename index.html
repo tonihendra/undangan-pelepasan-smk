@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pelepasan Siswa Kelas XII SMK Maarif NU 1 Ajibarang Tahun Pelajaran 2025 - 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    
+    <style>
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+        .font-latin { font-family: 'Great Vibes', cursive; } 
+        
+        body { background-color: #e5e7eb; display: flex; justify-content: center; }
+        
+        .mobile-wrapper {
+            width: 100%; max-width: 420px; 
+            background: #ffffff; min-height: 100vh;
+            position: relative; box-shadow: 0 0 40px rgba(0,0,0,0.2);
+            overflow-x: hidden;
+        }
+
+        .bg-green-gradient { background: linear-gradient(135deg, #0b4d2c 0%, #0f6238 50%, #052313 100%); }
+        .text-gold { color: #e1b74c; }
+        .bg-gold { background-color: #e1b74c; }
+
+        .bg-pattern { 
+            background-image: url('https://www.transparenttextures.com/patterns/batik-rombus.png'); 
+            opacity: 0.04; mix-blend-mode: overlay; 
+        }
+
+        .slide-up-cover { transform: translateY(-100%); transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .glow-button { box-shadow: 0 0 20px rgba(225, 183, 76, 0.4); }
+        
+        /* Partikel Cahaya Melayang */
+        .floating-orb {
+            position: absolute; border-radius: 50%;
+            background: radial-gradient(circle, rgba(225,183,76,0.15) 0%, rgba(225,183,76,0) 70%);
+            animation: float 8s infinite ease-in-out alternate; pointer-events: none;
+        }
+        .orb-1 { width: 200px; height: 200px; top: 10%; left: -20%; animation-delay: 0s; }
+        .orb-2 { width: 300px; height: 300px; bottom: 20%; right: -30%; animation-delay: -3s; }
+        .orb-3 { width: 150px; height: 150px; top: 50%; left: 50%; animation-delay: -5s; }
+
+        @keyframes float {
+            0% { transform: translateY(0px) scale(1); }
+            100% { transform: translateY(-30px) scale(1.1); }
+        }
+
+        .animate-breathe { animation: breathe 4s infinite ease-in-out; }
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(255,255,255,0.2)); }
+            50% { transform: scale(1.03); filter: drop-shadow(0 0 20px rgba(225,183,76,0.4)); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased overflow-hidden" id="body-utama">
+
+    <!-- ========================================== -->
+    <!-- 0. SPLASH SCREEN (Verifikasi Data)         -->
+    <!-- ========================================== -->
+    <div id="splash-screen" class="fixed top-0 left-0 w-full h-full bg-green-gradient z-[200] flex flex-col items-center justify-center transition-opacity duration-1000">
+        <div class="absolute top-0 left-0 w-full h-full bg-pattern pointer-events-none"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-[#e1b74c] mb-6 animate-bounce relative z-10" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 3L1 9l4 2.18v6L12 21l7-2.82v-6l2.08-1.13L23 9l-11-6zm0 2.33l7.69 4.18L12 13.68l-7.69-4.18L12 5.33zM17 15.2v-3.7l-5 2.73-5-2.73v3.7l5 2.72 5-2.72z" />
+        </svg>
+        <p class="text-[#e1b74c] text-[10px] tracking-[0.25em] font-medium uppercase animate-pulse relative z-10">
+            Memverifikasi Daftar Hadir...
+        </p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 1. LAYAR ERROR (Akses Ditolak)             -->
+    <!-- ========================================== -->
+    <div id="layar-error" class="hidden fixed top-0 left-0 w-full h-full bg-gray-100 z-[100] flex items-center justify-center p-4">
+        <div class="bg-white p-8 rounded-3xl shadow-2xl text-center max-w-sm w-full border-t-[6px] border-red-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-red-500 mx-auto mb-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <h2 class="text-xl font-bold text-gray-800 mb-2">Mohon Maaf</h2>
+            <p class="text-sm text-gray-500 leading-relaxed mb-6">Nama Anda tidak terdaftar dalam sistem Undangan Pelepasan Siswa Kelas XII SMK Maarif NU 1 Ajibarang Tahun Pelajaran 2025 - 2026.</p>
+            <button onclick="window.location.reload()" class="text-xs font-semibold text-red-600 underline tracking-wider uppercase">Coba Muat Ulang</button>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 2. LAYAR UNDANGAN UTAMA                    -->
+    <!-- ========================================== -->
+    <div class="mobile-wrapper hidden" id="wrapper-utama">
+        
+        <!-- ================= SAMPUL DEPAN ================= -->
+        <div id="cover-page" class="absolute top-0 left-0 w-full h-full bg-green-gradient z-50 flex flex-col items-center justify-center overflow-hidden border-[12px] border-transparent">
+            
+            <div class="absolute top-0 left-0 w-full h-full bg-pattern pointer-events-none"></div>
+            <div class="absolute top-2 left-2 w-[calc(100%-16px)] h-[calc(100%-16px)] border border-[#e1b74c]/30 rounded-lg pointer-events-none"></div>
+            
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+
+            <!-- Ornamen Sudut -->
+            <svg class="absolute top-4 left-4 w-12 h-12 text-[#e1b74c]/60 pointer-events-none" viewBox="0 0 100 100" fill="currentColor"><path d="M0,0 v30 h5 v-25 h25 v-5 z M10,10 v15 h2 v-13 h13 v-2 z"/></svg>
+            <svg class="absolute top-4 right-4 w-12 h-12 text-[#e1b74c]/60 pointer-events-none transform rotate-90" viewBox="0 0 100 100" fill="currentColor"><path d="M0,0 v30 h5 v-25 h25 v-5 z M10,10 v15 h2 v-13 h13 v-2 z"/></svg>
+            <svg class="absolute bottom-4 left-4 w-12 h-12 text-[#e1b74c]/60 pointer-events-none transform -rotate-90" viewBox="0 0 100 100" fill="currentColor"><path d="M0,0 v30 h5 v-25 h25 v-5 z M10,10 v15 h2 v-13 h13 v-2 z"/></svg>
+            <svg class="absolute bottom-4 right-4 w-12 h-12 text-[#e1b74c]/60 pointer-events-none transform rotate-180" viewBox="0 0 100 100" fill="currentColor"><path d="M0,0 v30 h5 v-25 h25 v-5 z M10,10 v15 h2 v-13 h13 v-2 z"/></svg>
+
+            <div class="z-10 p-6 text-center w-full flex flex-col items-center mt-2">
+                
+                <img src="image/logo.png" alt="Logo" class="w-16 h-16 mb-4 object-contain animate-breathe">
+                
+                <!-- SUSUNAN JUDUL BARU -->
+                <p class="text-[9px] tracking-[0.4em] font-medium text-white/80 uppercase mb-0">Undangan</p>
+                <h1 class="font-latin text-6xl md:text-7xl text-gold mb-1 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Pelepasan</h1>
+                <h2 class="font-serif text-lg md:text-xl tracking-widest text-white uppercase mb-3 border-y border-[#e1b74c]/40 py-2 px-4 bg-[#0b4d2c]/50 backdrop-blur-sm shadow-xl">Siswa Kelas XII</h2>
+                
+                <h3 class="font-sans text-sm md:text-[15px] font-bold text-gold uppercase tracking-[0.15em] mb-1 drop-shadow-md">SMK Ma'arif NU 1 Ajibarang</h3>
+                <p class="text-[9px] md:text-[10px] text-gray-300 mb-8 font-light tracking-[0.2em] opacity-90 uppercase">Tahun Pelajaran 2025 - 2026</p>
+
+                <!-- KOTAK NAMA SISWA -->
+                <div class="w-full bg-white/10 backdrop-blur-md p-5 rounded-[24px] border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.4)] mb-8 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
+                    <p class="text-[9px] text-[#e1b74c] mb-1 uppercase tracking-widest font-semibold relative z-10">Kepada Yth. Wali Murid:</p>
+                    <h2 id="nama-siswa" class="font-serif text-2xl md:text-3xl text-white font-bold mb-2 relative z-10 drop-shadow-md">Nama Siswa</h2>
+                    <p id="kelas-siswa" class="text-[9px] text-[#062b18] bg-gradient-to-r from-[#e1b74c] to-[#d4af37] inline-block px-4 py-1 rounded-full mb-1 shadow-lg font-bold tracking-[0.15em] uppercase relative z-10">Kelas XII</p>
+                </div>
+
+                <button onclick="bukaUndangan()" class="bg-gradient-to-r from-[#e1b74c] to-[#c5a028] hover:from-[#c5a028] hover:to-[#e1b74c] text-[#062b18] px-10 py-3.5 rounded-full transition duration-500 font-bold tracking-[0.2em] text-[10px] uppercase w-10/12 flex items-center justify-center gap-3 glow-button hover:scale-105 transform">
+                    Buka Undangan
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- ================= ISI UNDANGAN ================= -->
+        <div id="main-content" class="hidden w-full min-h-screen pb-20 bg-[#fcfdfd] relative">
+            
+            <div class="w-full h-[350px] relative bg-green-gradient">
+                <img src="image/gedung.jpg" class="w-full h-full object-cover opacity-20 mix-blend-luminosity">
+                <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#fcfdfd] to-transparent"></div>
+                <div class="absolute bottom-8 left-0 w-full text-center reveal">
+                    <h2 class="font-latin text-5xl text-gold mb-1">Kenangan</h2>
+                    <h3 class="font-serif text-2xl text-[#0b4d2c] font-bold tracking-widest uppercase">Masa Putih Abu-Abu</h3>
+                </div>
+            </div>
+
+            <section class="px-8 py-10 text-center reveal">
+                <p class="text-sm text-gray-600 leading-loose font-light">
+                    <span class="font-bold text-[#0b4d2c] text-lg font-serif">Assalamu’alaikum Wr. Wb.</span><br><br>
+                    Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu Wali Murid untuk hadir dan memberikan doa restu pada acara Pelepasan Siswa Kelas XII SMK Ma'arif NU 1 Ajibarang.
+                </p>
+            </section>
+
+            <section class="px-6 py-6 reveal">
+                <div class="bg-white rounded-[30px] p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-gray-50 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#e1b74c] to-[#0b4d2c]"></div>
+                    <div class="text-center mb-8"><h3 class="font-serif text-3xl text-[#0b4d2c]">Waktu & Tempat</h3></div>
+                    
+                    <div class="flex items-center gap-5 mb-5">
+                        <div class="w-12 h-12 rounded-full bg-[#f0fdf4] flex items-center justify-center text-[#0b4d2c] text-xl shadow-inner">📅</div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Sabtu, 15 Juni 2026</p>
+                            <p class="text-xs text-gray-500 mt-1">Pukul 08.00 WIB - Selesai</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-[1px] bg-gray-100 my-5"></div>
+
+                    <div class="flex items-center gap-5 mb-8">
+                        <div class="w-12 h-12 rounded-full bg-[#f0fdf4] flex items-center justify-center text-[#0b4d2c] text-xl shadow-inner">📍</div>
+                        <div>
+                            <p class="font-bold text-gray-800 text-sm">Gedung Kesenian</p>
+                            <p class="text-xs text-gray-500 mt-1">SMK Ma'arif NU 1 Ajibarang</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full h-56 rounded-2xl overflow-hidden shadow-inner border border-gray-100">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126600.08906950266!2d108.97745674335938!3d-7.411649999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e656114ebddf385%3A0x6b5ed51d08e5621!2sSMK%20Ma&#39;arif%20NU%201%20Ajibarang!5e0!3m2!1sid!2sid!4v1714570000000!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="px-6 py-12 reveal">
+                <div class="text-center mb-8">
+                    <h3 class="font-serif text-3xl text-[#0b4d2c]">Catatan Akhir Sekolah</h3>
+                    <p class="text-[9px] text-gray-400 tracking-widest uppercase mt-2">Video Persembahan Angkatan</p>
+                </div>
+                <div class="w-full rounded-[20px] overflow-hidden shadow-2xl bg-black border-[6px] border-[#f0fdf4]">
+                    <video controls class="w-full aspect-video object-cover">
+                        <source src="image/video-angkatan.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+
+            <section class="px-6 py-8 reveal">
+                <div class="text-center mb-8">
+                    <h3 class="font-serif text-3xl text-[#0b4d2c]">Galeri Kenangan</h3>
+                    <p class="text-[9px] text-gray-400 tracking-widest uppercase mt-2">Kisah Klasik Untuk Masa Depan</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="image/galeri1.jpg" class="w-full h-44 object-cover rounded-2xl shadow-md hover:scale-105 transition duration-500">
+                    <img src="image/galeri2.jpg" class="w-full h-44 object-cover rounded-2xl shadow-md hover:scale-105 transition duration-500">
+                    <img src="image/galeri3.jpg" class="w-full h-44 object-cover rounded-2xl shadow-md hover:scale-105 transition duration-500">
+                    <img src="image/galeri4.jpg" class="w-full h-44 object-cover rounded-2xl shadow-md hover:scale-105 transition duration-500">
+                </div>
+            </section>
+
+            <section class="px-6 py-14 text-center bg-green-gradient mt-10 reveal text-white relative rounded-t-[40px] shadow-[0_-10px_30px_rgba(0,0,0,0.1)]">
+                <div class="bg-pattern absolute top-0 left-0 w-full h-full pointer-events-none rounded-t-[40px]"></div>
+                <p class="text-sm italic mb-8 relative z-10 font-serif leading-loose opacity-90 text-gold">"Tuntutlah ilmu sampai ke negeri China, kembalilah untuk membangun bangsa dan agama."</p>
+                <div class="relative z-10">
+                    <p class="text-[10px] text-gray-300 mb-2 uppercase tracking-widest">Mengetahui,</p>
+                    <p class="font-bold text-white text-lg font-serif">Kepala SMK Ma'arif NU 1 Ajibarang</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SCRIPT VALIDASI DATA OBJEK                 -->
+    <!-- ========================================== -->
+    <script>
+        const daftarSiswaValid = [
+            { nama: "Budi Santoso", kelas: "XII TKJ A" },
+            { nama: "Siti Aminah", kelas: "XII RPL B" },
+            { nama: "Ahmad Fauzi", kelas: "XII TSM A" },
+            { nama: "Vikriana S.Kom", kelas: "Staff Pendidik" }
+        ];
+
+        window.addEventListener('load', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const guestName = urlParams.get('to');
+            
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                splash.classList.add('opacity-0');
+                
+                setTimeout(() => {
+                    splash.style.display = 'none';
+                    const layarError = document.getElementById('layar-error');
+                    const wrapperUtama = document.getElementById('wrapper-utama');
+
+                    if (guestName) {
+                        const dataCocok = daftarSiswaValid.find(siswa => siswa.nama.toLowerCase() === guestName.toLowerCase());
+                        if (dataCocok) {
+                            document.getElementById('nama-siswa').innerText = dataCocok.nama;
+                            document.getElementById('kelas-siswa').innerText = dataCocok.kelas;
+                            
+                            wrapperUtama.classList.remove('hidden');
+                            document.getElementById('body-utama').classList.remove('overflow-hidden');
+                            return; 
+                        }
+                    }
+                    layarError.classList.remove('hidden');
+                }, 1000);
+            }, 2500);
+        });
+
+        function bukaUndangan() {
+            document.getElementById('main-content').classList.remove('hidden');
+            const cover = document.getElementById('cover-page');
+            cover.classList.add('slide-up-cover');
+            setTimeout(() => { cover.style.display = 'none'; }, 1500);
+        }
+
+        window.addEventListener('scroll', revealElements);
+        function revealElements() {
+            let reveals = document.querySelectorAll('.reveal');
+            for (let i = 0; i < reveals.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) reveals[i].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
